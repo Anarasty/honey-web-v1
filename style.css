@@ -372,7 +372,14 @@ h5 {
   box-shadow: 0px 0px 1.7px rgba(0, 0, 0, 0.073),
     0px 0px 4.8px rgba(0, 0, 0, 0.105), 0px 0px 11.5px rgba(0, 0, 0, 0.137),
     0px 0px 38px rgba(0, 0, 0, 0.21);
-    margin: 2rem;
+  margin: 2rem;
+  transition: .3s ease;
+  border: 2px solid transparent;
+}
+
+.honey .honey-menu .card1:hover {
+  transform: scale(1.03);
+  border-color: #ecf0f1;
 }
 
 .honey .honey-menu .card1 .img-container img {
@@ -408,15 +415,118 @@ h5 {
   justify-content: space-between;
   align-items: center;
 }
-.card1 .product-container .product-name .price{
+.card1 .product-container .product-name .price {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.card1 .product-container .product-name .price h5{
+.card1 .product-container .product-name .price h5 {
   font-size: 1.5rem;
   color: #f9a602;
   text-align: center;
   font-weight: 900;
   font-family: "Alkatra", cursive;
+}
+
+.contact {
+  padding: 8rem;
+  background-color: #171717;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contact .form-container {
+  width: 40%;
+}
+.contact .form-container h2 {
+  font-size: 2rem;
+  color: #ffc947;
+  padding-bottom: 10px;
+  width: 100%;
+  font-weight: 100;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.form-container .form input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ffc947;
+  outline: none;
+  margin: 15px 0;
+}
+
+.form-container .form input:hover,
+textarea:hover {
+  border: 2px solid #f9a602;
+}
+
+.form-container .form input::placeholder {
+  color: #8a6e3d;
+  font-size: 1.1rem;
+}
+
+.form-container .form textarea::placeholder {
+  color: #8a6e3d;
+  font-size: 1.1rem;
+  height: 80%;
+}
+
+.form-container .form a {
+  width: 100%;
+  padding: 15px 0;
+  background: #ffc947;
+  color: #5c3c0d;
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 15px 0;
+  transition: .3s ease;
+}
+
+.form-container .form a:hover {
+  color: #f9a602;
+  background: #5c3c0d;;
+}
+
+.contact .map {
+  width: 45%;
+}
+
+.contact .map h2 {
+  font-size: 2rem;
+  color: #ffc947;
+  padding-bottom: 10px;
+  width: 100%;
+  font-weight: 100;
+}
+
+.contact .map p {
+  font-size: 1.1rem;
+  color: #f9a602;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.contact .map i {
+  color: red;
+  padding-right: 5px;
+}
+
+.contact .map iframe {
+  width: 100%;
+}
+
+footer {
+  border-top: 1px solid #ecf0f1;
+  padding: 2rem 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
