@@ -358,15 +358,21 @@ h5 {
   padding-bottom: 50px;
   text-align: center;
 }
-
+.honey .honey-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .honey .honey-menu .card1 {
-  width: 45%;
+  width: 25%;
   height: auto;
   box-sizing: border-box;
   background: #5c3c0d;
   box-shadow: 0px 0px 1.7px rgba(0, 0, 0, 0.073),
     0px 0px 4.8px rgba(0, 0, 0, 0.105), 0px 0px 11.5px rgba(0, 0, 0, 0.137),
     0px 0px 38px rgba(0, 0, 0, 0.21);
+    margin: 2rem;
 }
 
 .honey .honey-menu .card1 .img-container img {
@@ -383,22 +389,34 @@ h5 {
 .card1 .product-container .product-name .name-details h4 {
   font-size: 1.3rem;
   font-family: "Alkatra", cursive;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   font-weight: 100;
   color: #f9a602;
 }
 .card1 .product-container .product-name .name-details p {
   font-size: 1rem;
   color: #ffc947;
+  margin-bottom: 20px;
 }
-
-.card1 .product-container .product-name .name-details span {
-  color: #f9a602;
+.card1 .product-container .product-description p {
+  font-size: 1rem;
+  color: #fcc33c;
 }
-
 .card1 .product-container .product-name {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card1 .product-container .product-name .price{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card1 .product-container .product-name .price h5{
+  font-size: 1.5rem;
+  color: #f9a602;
+  text-align: center;
+  font-weight: 900;
+  font-family: "Alkatra", cursive;
 }
