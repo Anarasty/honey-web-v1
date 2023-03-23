@@ -10,6 +10,11 @@
   font-family: "Rubik", sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -80,11 +85,18 @@ li {
   transition: 0.3s ease;
 }
 
+#bar-menu {
+  color: #f9a602;
+  font-size: 1.5rem;
+  display: none;
+}
+
 .back {
   background-image: url("images/background1.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
+  background-attachment: fixed;
   z-index: -1;
 }
 .back .overlay {
@@ -373,7 +385,7 @@ h5 {
     0px 0px 4.8px rgba(0, 0, 0, 0.105), 0px 0px 11.5px rgba(0, 0, 0, 0.137),
     0px 0px 38px rgba(0, 0, 0, 0.21);
   margin: 2rem;
-  transition: .3s ease;
+  transition: 0.3s ease;
   border: 2px solid transparent;
 }
 
@@ -486,12 +498,12 @@ textarea:hover {
   text-align: center;
   font-size: 1.1rem;
   margin: 15px 0;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .form-container .form a:hover {
   color: #f9a602;
-  background: #5c3c0d;;
+  background: #5c3c0d;
 }
 
 .contact .map {
@@ -529,4 +541,262 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+/* MEDIAS */
+
+@media screen and (max-width: 1042px) {
+  .nav {
+    padding: 1rem 4rem;
+  }
+
+  .nav h2 {
+    font-size: 1.4rem;
+  }
+
+  .nav-links li {
+    padding-right: 30px;
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem;
+  }
+
+  .nav-links .icons i {
+    padding-right: 20px;
+  }
+
+  .main-page .bee1 {
+    top: -40%;
+    width: 200px;
+  }
+  .main-page .bee2 {
+    top: 80%;
+    width: 200px;
+  }
+
+  .main-page p {
+    font-size: 1.1rem;
+  }
+
+  .main-page h2 {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+  }
+
+  .main-page .main-buttons {
+    margin-top: 2rem;
+  }
+
+  .main-page .main-buttons .btn2 {
+    color: #8a6e3d;
+    border: 1px solid #8a6e3d;
+    font-weight: 900;
+    border-radius: 3px;
+  }
+
+  .about {
+    padding: 6rem 8rem;
+  }
+
+  .about-secondary {
+    padding: 6rem 8rem;
+  }
+  .about-secondary .about-full h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav {
+    padding: 1rem 3rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    width: 250px;
+    height: 80vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #222;
+    z-index: 10000;
+    margin-top: 4.2rem;
+    display: none;
+  }
+
+  .nav-links li {
+    padding: 4px 0;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+  }
+  .nav-links .icons {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-links .icons i {
+    padding: 0 15px;
+  }
+
+  #bar-menu {
+    display: initial;
+    cursor: pointer;
+  }
+
+  .main-page .bee1 {
+    top: -20%;
+    left: -40%;
+    width: 180px;
+  }
+
+  .main-page .bee2 {
+    top: 80%;
+    right: -45%;
+    width: 180px;
+  }
+
+  .about {
+    padding: 3rem 5rem;
+  }
+
+  .about .box1 h3 {
+    font-size: 2rem;
+  }
+
+  .about .box1 p {
+    font-size: 1rem;
+  }
+
+  .about .box2 h3 {
+    font-size: 2rem;
+  }
+
+  .about .box2 h5 {
+    font-size: 1rem;
+  }
+  .about .box2 p {
+    font-size: 1rem;
+  }
+
+  .about-secondary {
+    padding: 3rem 5rem;
+    flex-wrap: wrap;
+  }
+
+  .about-secondary .about-full {
+    width: 100%;
+  }
+
+  .about-secondary .photos {
+    width: 100%;
+  }
+
+  .honey .honey-menu {
+    flex-direction: column;
+  }
+  .honey .honey-menu .card1 {
+    width: 100%;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact .form-container {
+    width: 100%;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .contact .map {
+    text-align: center;
+    width: 100%;
+  }
+
+  footer {
+    padding: 2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    padding: 1rem 3rem;
+  }
+  .main-page .bee1 {
+    top: -10%;
+    left: -50%;
+    width: 150px;
+  }
+
+  .main-page .bee2 {
+    top: 100%;
+    right: -45%;
+    width: 150px;
+  }
+
+  .main-page p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-page h2 {
+    font-size: 2rem;
+    /* letter-spacing: 3px; */
+    line-height: 40px;
+  }
+  .main-page .main-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-page .main-buttons .btn2 {
+    margin-top: 1rem;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 2rem 4rem;
+  }
+
+  .about .box1 {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .about .box2 {
+    width: 100%;
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid #8a6e3d;
+    padding-top: 2rem;
+  }
+
+  /* ! */
+  .about-secondary {
+    flex-direction: column;
+    padding: 2rem 4rem;
+  }
+
+  .about-secondary .about-full h2 {
+    font-size: 1.7rem;
+    letter-spacing: 3px;
+  }
+
+  .about-secondary .photos {
+    flex-direction: column;
+  }
+
+  .about-secondary .photos .container {
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 496px) {
 }
