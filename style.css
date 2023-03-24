@@ -777,7 +777,6 @@ footer {
     padding-top: 2rem;
   }
 
-  /* ! */
   .about-secondary {
     flex-direction: column;
     padding: 2rem 4rem;
@@ -796,7 +795,51 @@ footer {
     width: 100%;
     margin: 2rem 0;
   }
+
+  .honey {
+    padding: 2rem 4rem;
+  }
+
+  .honey .title-small {
+    font-size: 1.1rem;
+  }
+
+  .honey .title-big {
+    font-size: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  .contact {
+    padding: 4rem;
+  }
+
+  footer {
+    padding: 2rem 4rem;
+    flex-direction: column;
+  }
+  footer p {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 496px) {
+  .main-page .bee1 {
+    display: none;
+  }
+
+  .main-page .bee2 {
+    display: none;
+  }
+  .main-page h2 {
+    font-size: 1.5rem;
+  }
+  .about,
+  .about-secondary,
+  .honey {
+    padding: 1rem 2rem;
+  }
+
+  .contact {
+    padding: 2rem;
+  }
 }
