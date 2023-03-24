@@ -15,15 +15,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!--! AOS LIB -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <div class="nav">
       <h2>Honey Boom</h2>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Honey</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#honey">Honey</a></li>
+        <li><a href="#contact">Contact</a></li>
         <div class="icons">
           <i class="fa-brands fa-facebook-f"></i>
           <i class="fa-brands fa-instagram"></i>
@@ -33,7 +35,7 @@
       <i id="bar-menu" class="fa-solid fa-bars"></i>
     </div>
 
-    <div class="back">
+    <div id="home" class="back">
       <div class="overlay"></div>
     </div>
 
@@ -48,8 +50,8 @@
       </div>
     </div>
 
-    <div class="about">
-      <div class="box1">
+    <div id="about" class="about">
+      <div class="box1" data-aos="fade-right">
         <h3>Want to know more about Honey Boom?</h3>
         <p>
           Our apiary was founded by <span>Jonathan Rodfil</span> back in 1982.
@@ -60,7 +62,7 @@
         </p>
         <a href="#">See Products</a>
       </div>
-      <div class="box2">
+      <div class="box2" data-aos="fade-left">
         <h3>Working and Shipping Hours</h3>
         <br />
         <h5>Monday-Friday</h5>
@@ -75,7 +77,7 @@
     </div>
 
     <div class="about-secondary">
-      <div class="about-full">
+      <div class="about-full" data-aos="fade-right">
         <h2>Learn more about our story</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
@@ -91,7 +93,7 @@
           eligendi reprehenderit recusandae?
         </p>
       </div>
-      <div class="photos">
+      <div class="photos" data-aos="fade">
         <div class="container">
           <div class="img-container">
             <img src="images/man1.jpg" alt="man1" />
@@ -113,11 +115,11 @@
       </div>
     </div>
 
-    <div class="honey">
+    <div id="honey" class="honey">
       <p class="title-small">See our most popular</p>
       <h2 class="title-big">Honey</h2>
       <div class="honey-menu">
-        <div class="card1">
+        <div class="card1" data-aos-duration="2000" data-aos="fade-up" data-aos-delay="100">
           <div class="img-container">
             <img src="images/honey1.jpg" alt="honey1" />
           </div>
@@ -137,7 +139,7 @@
           </div>
         </div>
 
-        <div class="card1">
+        <div class="card1" data-aos-duration="2000" data-aos="fade-up" data-aos-delay="200">
           <div class="img-container">
             <img src="images/honey2.jpg" alt="honey1" />
           </div>
@@ -157,7 +159,7 @@
           </div>
         </div>
 
-        <div class="card1">
+        <div class="card1" data-aos-duration="2000" data-aos="fade-up" data-aos-delay="300">
           <div class="img-container">
             <img src="images/honey3.jpg" alt="honey1" />
           </div>
@@ -179,8 +181,8 @@
       </div>
     </div>
 
-    <div class="contact">
-      <div class="form-container">
+    <div id="contact" class="contact">
+      <div class="form-container" data-aos="fade-right">
         <h2>Contact us any time!</h2>
         <form class="form">
           <input type="text" name="" placeholder="Name" />
@@ -189,7 +191,7 @@
           <a href="">Send Message</a>
         </form>
       </div>
-      <div class="map">
+      <div class="map" data-aos="fade-left">
         <h2>Where you can find us</h2>
         <p>
           <i class="fa-sharp fa-solid fa-location-dot"></i> 501 Balcones heights
@@ -212,6 +214,29 @@
       <p><i class="fa-solid fa-envelope"></i> honeyboom@gmail.com</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: "aos-init", // class applied after initialization
+        animatedClassName: "aos-animate", // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 200, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 2000, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
